@@ -340,7 +340,10 @@ function buildPostPage(title, dateDisplay, bodyHtml, imagePath) {
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-D4ECZDKT6C');
+  gtag('config', 'G-D4ECZDKT6C', {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
