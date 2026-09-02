@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "title": "Test Post For Pipeline Verification",
+    "slug": "test-post-for-pipeline-verification",
+    "image": null,
+    "date": "2026-09-02",
+    "dateDisplay": "September 2, 2026",
+    "excerpt": "This is a test paragraph to confirm the upload-to-post pipeline works end to end."
+  }
+]
