@@ -344,20 +344,74 @@ function buildPostPage(title, dateDisplay, bodyHtml, imagePath) {
 <meta name="twitter:image" content="${shareImageUrl}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
 <header class="site-header">
   <div class="header-inner">
-    <a class="brand" href="../index.html">
-      <img src="../assets/img/ets-logo.png" alt="ExcavationTrenchingShoring.com" width="130" height="34">
+    <a href="../index.html" class="logo">
+      <img src="../assets/img/ets-logo.png" alt="ExcavationTrenchingShoring.com" class="logo-icon">
+      <span class="logo-text">
+        <span class="logo-mark">ExcavationTrenchingShoring.com</span>
+        <span class="logo-sub">Excavation Trenching &amp; Shoring Training</span>
+      </span>
     </a>
-    <nav>
-      <a href="../index.html">Blog</a>
-      <a href="https://excavationtrenchingshoring.com">Main Site</a>
-      <a href="https://excavationtrenchingshoring.com/index.html#courses">Courses</a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="../index.html" class="is-active">Blog</a>
+      <a href="https://excavationtrenchingshoring.com/index.html#overview">Overview</a>
+      <div class="nav-dropdown">
+        <a href="https://excavationtrenchingshoring.com/index.html#courses">Courses</a>
+        <div class="nav-dropdown-panel">
+          <a href="https://excavationtrenchingshoring.com/excavation-trenching-shoring-safety-training/">Excavation, Trenching &amp; Shoring Safety Training</a>
+          <a href="https://excavationtrenchingshoring.com/competent-person-excavation-trenching-shoring-training/">Competent Person Training</a>
+        </div>
+      </div>
+      <a href="https://excavationtrenchingshoring.com/which-excavation-course-do-i-need/">Which Course?</a>
+      <div class="nav-dropdown">
+        <a href="https://excavationtrenchingshoring.com/osha-excavation-standards/">Resources</a>
+        <div class="nav-dropdown-panel">
+          <a href="https://excavationtrenchingshoring.com/osha-excavation-standards/">OSHA Excavation Standards</a>
+          <a href="https://excavationtrenchingshoring.com/osha-subpart-p-training-guide/">OSHA Subpart P Training Guide</a>
+          <a href="https://excavationtrenchingshoring.com/excavation-protective-systems/">Protective Systems</a>
+          <a href="https://excavationtrenchingshoring.com/soil-classification-training/">Soil Classification</a>
+          <a href="https://excavationtrenchingshoring.com/underground-utility-safety/">Underground Utility Safety</a>
+          <a href="https://excavationtrenchingshoring.com/excavation-emergency-planning/">Emergency Planning</a>
+          <a href="https://excavationtrenchingshoring.com/state-osha-plan-requirements/">State OSHA Plan Requirements</a>
+          <a href="https://excavationtrenchingshoring.com/credential-transparency/">Credential Transparency</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a href="https://excavationtrenchingshoring.com/excavation-safety-vs-competent-person-training/">Compare</a>
+        <div class="nav-dropdown-panel">
+          <a href="https://excavationtrenchingshoring.com/excavation-safety-vs-competent-person-training/">Safety vs. Competent Person</a>
+          <a href="https://excavationtrenchingshoring.com/trenching-vs-excavation-training/">Trenching vs. Excavation</a>
+          <a href="https://excavationtrenchingshoring.com/sloping-benching-shoring-shielding-explained/">Sloping, Benching, Shoring &amp; Shielding</a>
+          <a href="https://excavationtrenchingshoring.com/excavation-competent-person-requirements/">Competent Person Requirements</a>
+          <a href="https://excavationtrenchingshoring.com/excavation-training-for-utility-crews/">Training for Utility Crews</a>
+          <a href="https://excavationtrenchingshoring.com/excavation-training-for-municipal-crews/">Training for Municipal Crews</a>
+        </div>
+      </div>
+      <a href="https://excavationtrenchingshoring.com/about/">About</a>
+      <a href="https://excavationtrenchingshoring.com/reviews/">Reviews</a>
+      <a href="https://excavationtrenchingshoring.com/frequently-asked-questions/">FAQ</a>
+      <a href="tel:18664296742" class="nav-phone">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        1-866-429-6742
+      </a>
+      <a href="mailto:info@hazwoper-osha.com" class="nav-phone nav-email">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@hazwoper-osha.com
+      </a>
     </nav>
+
+    <div class="header-actions">
+      <a href="https://excavationtrenchingshoring.com/index.html#pricing" class="btn">Enroll Now</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
@@ -403,6 +457,7 @@ ${bodyHtml}
     <div class="footer-bottom-inner">&copy; <span id="year">${new Date().getFullYear()}</span> Industrial Certified Training, LLC - All Rights Reserved</div>
   </div>
 </footer>
+<script src="../assets/js/header.js"></script>
 </body>
 </html>
 `;
