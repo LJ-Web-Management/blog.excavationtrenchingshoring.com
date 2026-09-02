@@ -1,0 +1,3 @@
+Second Pipeline Verification Post
+
+Confirming the fixed workflow deploys automatically after a doc upload, with no extra push required.
