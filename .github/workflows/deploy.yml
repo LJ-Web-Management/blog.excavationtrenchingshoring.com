@@ -3,6 +3,12 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+    # Uploads are handled (converted + deployed) by convert-docx.yml. If this
+    # workflow also ran on that same push, it would check out the commit as
+    # it stood *before* conversion and could finish after that workflow's own
+    # deploy, overwriting the freshly-published post with the stale state.
+    paths-ignore:
+      - "uploads/**"
   workflow_dispatch:
 
 permissions:
