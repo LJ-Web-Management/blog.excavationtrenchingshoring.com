@@ -1,8 +1,0 @@
-Test Post For Pipeline Verification
-
-This is a test paragraph to confirm the upload-to-post pipeline works end to end.
-
-SOURCES
-
-OSHA Subpart P
-https://www.osha.gov/laws-regs/regulations/standardnumber/1926/1926SubpartP

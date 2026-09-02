@@ -10,10 +10,19 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   convert:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,3 +49,18 @@ jobs:
             git commit -m "Publish blog post(s) from uploaded Word document(s)"
             git push
           fi
+
+      # A push made with the workflow's own GITHUB_TOKEN (the commit above)
+      # does not trigger the separate "Deploy to GitHub Pages" workflow, so
+      # this job deploys the freshly-converted site itself.
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
